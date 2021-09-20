@@ -1,6 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const InventarioTable = queryInterface.createTable("Inventarios",{
+    const InventarioTable = queryInterface.createTable("inventarios",{
       id: {
         type: Sequelize.BIGINT,
         allowNull: false,
@@ -61,6 +61,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Inventarios');
+    return queryInterface.dropTable('inventarios');
   }
 };

@@ -6,7 +6,6 @@ const env = process.env.NODE_ENV || 'development';
 const config = require(__dirname + '/../config/config.json')[env];
 
 const router = Router();
-
 RegistroComentario.belongsTo(Usuario, {as: 'usuarios', foreignKey: 'id'});
 Usuario.hasMany(RegistroComentario, {as:'comentarios', foreignKey: 'usuario_comentario_id'});
 

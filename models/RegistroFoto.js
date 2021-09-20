@@ -1,10 +1,9 @@
 const RegistroFoto = (sequelize, DataTypes) => {
-    var obj =  sequelize.define(
+    return sequelize.define(
         'RegistroFoto', {
         registro_id: DataTypes.INTEGER,
         filepath: DataTypes.STRING
-    });
-    return obj;
+    },{ tableName:'registrofotos' });
 };
 
 module.exports = RegistroFoto;

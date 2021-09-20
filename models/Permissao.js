@@ -1,5 +1,5 @@
 const Permissao = (sequelize, DataTypes) => {
-    return sequelize.define('Permissao', {
+    var obj = sequelize.define('Permissao', {
         nome: DataTypes.STRING,
         cria_registro_publico: DataTypes.BOOLEAN,
         cria_registro_privado: DataTypes.BOOLEAN,
@@ -7,7 +7,8 @@ const Permissao = (sequelize, DataTypes) => {
         cria_comentarios: DataTypes.BOOLEAN,
         ver_usuarios: DataTypes.BOOLEAN,
         criar_usuarios: DataTypes.BOOLEAN,
-    });
+    },{ tableName:'permissaos' });
+    return obj;
 };
 
 module.exports = Permissao;

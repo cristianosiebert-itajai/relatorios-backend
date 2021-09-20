@@ -4,7 +4,7 @@ const Disciplina = (sequelize, DataTypes) => {
         createdAt: DataTypes.DATE,
         updatedAt: DataTypes.DATE,
         deletedAt: DataTypes.DATE,
-    });
+    },{ tableName:'disciplinas' });
 };
 
 module.exports = Disciplina;

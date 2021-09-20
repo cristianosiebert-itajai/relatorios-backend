@@ -12,7 +12,7 @@ const Inventario = (sequelize, DataTypes) => {
         createdBy: DataTypes.BIGINT,
         updatedBy: DataTypes.BIGINT,
         deletedBy: DataTypes.BIGINT,
-    });
+    },{ tableName:'inventarios' });
 };
 
 module.exports = Inventario;

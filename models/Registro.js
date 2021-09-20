@@ -1,5 +1,5 @@
 const Registro = (sequelize, DataTypes) => {
-    const obj = sequelize.define(
+    return sequelize.define(
         'Registro', {
         user_id: DataTypes.STRING,
         tipo_registro: DataTypes.INTEGER,
@@ -20,8 +20,7 @@ const Registro = (sequelize, DataTypes) => {
         createdBy: DataTypes.BIGINT,
         updatedBy: DataTypes.BIGINT,
         deletedBy: DataTypes.BIGINT,
-    });
-    return obj;
+    },{ tableName:'registros' });
 };
 
 module.exports = Registro;

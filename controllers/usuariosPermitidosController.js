@@ -26,6 +26,17 @@ router.get('/', async(req,res) => {
     }
 });
 
+router.get('/email/:email', async(req,res) => {
+    try {
+        const users_email = await UsuarioPermitido.findAll({where: { email: req.params.email } });
+        res.status(200).json(users_email);
+    } catch (e) {
+        console.log(e);
+        res.status(500).json({message:"Erro interno do servidor.", error_message: e});
+    }
+});
+
+
 router.get('/:id', async(req,res) => {
     try {
         const usuario = await UsuarioPermitido.findByPk(req.params.id);

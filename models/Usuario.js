@@ -6,7 +6,7 @@ const Usuario = (sequelize, DataTypes) => {
         foto: DataTypes.STRING,
         ativo: DataTypes.BOOLEAN,
         permissao: DataTypes.INTEGER
-    });
+    },{ tableName:'usuarios' });
 };
 
 module.exports = Usuario;

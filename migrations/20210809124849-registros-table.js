@@ -1,6 +1,6 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const RegistroTable = queryInterface.createTable("Registros",{
+    const RegistroTable = queryInterface.createTable("registros",{
       id: {
         type: Sequelize.BIGINT,
         allowNull: false,
@@ -89,6 +89,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Registros');
+    return queryInterface.dropTable('registros');
   }
 };

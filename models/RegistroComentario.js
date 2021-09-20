@@ -6,7 +6,7 @@ const RegistroComentario = (sequelize, DataTypes) => {
         comentario_pai_id: DataTypes.INTEGER,
         data_comentario: DataTypes.DATE,
         ativo: DataTypes.BOOLEAN
-    });
+    },{ tableName:'registroscomentarios' });
 };
 
 module.exports = RegistroComentario;
