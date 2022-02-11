@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password": "ebylaitajai",
+    "username": "phpmyadmin",
+    "password": "lyanna05122012",
     "database": "relatorios_instrutores_dev",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "ebylaitajai",
+    "username": "phpmyadmin",
+    "password": "lyanna05122012",
     "database": "relatorios_instrutores_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "ebylaitajai",
+    "username": "phpmyadmin",
+    "password": "lyanna05122012",
     "database": "relatorios_instrutores",
     "host": "127.0.0.1",
     "dialect": "mysql"

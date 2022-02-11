@@ -26,7 +26,7 @@ router.get('/:registro_id', async(req,res) => {
         }
 
         var comentarios = await sequelize.query(
-            'SELECT `RegistroComentario`.*, `usuarios`.nome, `usuarios`.foto FROM `registrocomentarios` AS `RegistroComentario` LEFT OUTER JOIN `Usuarios` AS `usuarios` ON `RegistroComentario`.`usuario_comentario_id` = `usuarios`.`id` WHERE `RegistroComentario`.`registro_id` = "'+req.params.registro_id+'" AND `RegistroComentario`.`comentario_pai_id` IS NULL ORDER BY createdAt DESC',
+            'SELECT `RegistroComentario`.*, `usuarios`.nome, `usuarios`.foto FROM `registrocomentarios` AS `RegistroComentario` LEFT OUTER JOIN `usuarios` AS `usuarios` ON `RegistroComentario`.`usuario_comentario_id` = `usuarios`.`id` WHERE `RegistroComentario`.`registro_id` = "'+req.params.registro_id+'" AND `RegistroComentario`.`comentario_pai_id` IS NULL ORDER BY createdAt DESC',
             {model: RegistroComentario}
         );
 
